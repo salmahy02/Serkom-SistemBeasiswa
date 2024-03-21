@@ -19,6 +19,20 @@ Berikut adalah struktur direktori yang digunakan dalam proyek ini:
 - `grafik.php`: Halaman untuk membuat visualisasi data pendaftaran dalam bentuk grafik.
 - `proses_pendaftaran.php`: Halaman untuk memproses pendaftaran beasiswa
 
+## Panduan Pengkodean
+
+Agar kode tetap terstruktur dan mudah dimengerti oleh semua anggota tim, kami mengikuti pedoman pengkodean berikut:
+
+### Penamaan File
+
+- Gunakan huruf kecil dan pisahkan kata dengan tanda underscore (\_) untuk penamaan file.
+- Berikan nama file yang deskriptif dan mencerminkan fungsi utama dari file tersebut.
+
+### Penamaan Variabel dan Fungsi
+
+- Gunakan gaya camelCase untuk penamaan variabel dan fungsi (contoh: `ipkInput`, `jmlAkademik`).
+- Berikan nama yang singkat dan deskriptif, menggambarkan tujuan atau isi variabel/fungsi.
+
 ## Tech Stack
 - Bootstrap5 or latest version
 - Javascript & Jquery
