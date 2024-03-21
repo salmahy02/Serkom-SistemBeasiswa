@@ -1,5 +1,5 @@
 <?php
-
+//impor file
 include('config.php')
 ?>
 
@@ -8,9 +8,11 @@ include('config.php')
 
 
 <head>
+  <!-- informasi meta dan pengaturan tampilan -->
   <meta charset="UTF-8">
   <title>KampusKuAja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Mengimpor berbagai file CSS -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.css">
@@ -62,10 +64,12 @@ include('config.php')
   </header>
   <!-- Navbar End -->
 
+  <!-- Hasil Start -->
     <div class="container">
         <div class="card mt-3">
-            <h4 class="text-center mt-4">Daftar Mahasiwa</h4>
+            <h4 class="text-center mt-4">Daftar Mahasiswa</h4>
             <div class="card-body">
+                <!-- Menampilkan pesan hasil jika ada -->
                 <?php
                 if (isset($_SESSION['result'])) {
                 ?>
@@ -76,6 +80,7 @@ include('config.php')
                 <?php
                 }
                 ?>
+                 <!-- Tabel untuk menampilkan data mahasiswa -->
                 <table class="table table-responsive table-bordered">
                     <thead>
                         <tr>
@@ -93,6 +98,7 @@ include('config.php')
                     </thead>
                     <tbody>
                         <?php
+                        // Mengambil data mahasiswa dari database
                         $query = mysqli_query($conn, 'SELECT * FROM mahasiswa');
                         $i = 1;
                         $status = '';
@@ -109,27 +115,26 @@ include('config.php')
                             echo "<td>" . $user['beasiswa'] . " </td>";
                             echo "<td>". $user['status'] . "</td>";
                             echo "<td>" . "<a href='assets/file/$user[berkas]' class='btn btn-sm btn-primary'>Berkas</a>" . "</td>";
+                             // Tombol untuk verifikasi atau membatalkan verifikasi berdasarkan status
                             if($user['status'] == "Verifikasi") {
                                 echo "<td>" . "<a href='verifikasi.php?id=$user[id]' class='btn btn-danger btn-sm'>Batalkan</a>"  . "</td>";
                             } else {
                                 echo "<td>" . "<a href='verifikasi.php?id=$user[id]' class='btn btn-success btn-sm'>Verifikasi</a>"  . "</td>";
                             }
                             echo "</tr>";
-                        }
+                          }
                         ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <!-- Hasil End -->
      <!-- Tombol untuk menuju halaman grafik -->
      <div class="text-center mt-4">
           <a href="grafik.php" class="btn btn-primary">Lihat Grafik</a>
         </div>
-      </div>
-    </div>
-  </div>
-
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>

@@ -71,9 +71,11 @@ session_start();
                     <p>Registrasi Beasiswa</p>
                 </div>
                 <?php
+                // Menampilkan pesan yang disimpan dalam sesi
                 if (isset($_SESSION['message'])) {
                     if ($_SESSION['message'][1] == 'sukses') {
                 ?>
+                <!-- Menampilkan pesan sukses jika ada -->
                         <div class="alert alert-success mt-3" role="alert">
                             <?= $_SESSION['message'][0]; ?>
                             <?php unset($_SESSION['message']); ?>
@@ -81,6 +83,7 @@ session_start();
                     <?php
                     } else {
                     ?>
+                    <!-- Menampilkan pesan error jika ada -->
                         <div class="alert alert-danger mt-3" role="alert">
                             <?= $_SESSION['message'][0]; ?>
                             <?php unset($_SESSION['message']); ?>
@@ -89,6 +92,7 @@ session_start();
                     }
                 }
                 ?>
+                <!-- Form pendaftaran beasiswa -->
                 <div class="card-body">
                     <form action="proses_pendaftaran.php" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
@@ -112,7 +116,7 @@ session_start();
                             <select class="form-select" name="semester">
                                 <option value="" disabled selected>-- Pilih --</option>
                                 <?php
-                                for ($i = 1; $i < 9; $i++) {
+                                for ($i = 1; $i < 9; $i++) {  // Menampilkan opsi semester
                                 ?>
                                     <option value="<?= $i; ?>"><?= $i; ?></option>
 

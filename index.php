@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
+<!-- Navbar Start -->
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
   <header id="header-section">
     <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
@@ -51,6 +52,9 @@
     </div> 
     </nav>   
   </header>
+  <!-- Navbar End -->
+
+  <!-- Tentang Section-->
   <div class="banner" >
     <div class="container">
       <h1 class="font-weight-semibold">Beasiswa</h1>
@@ -93,7 +97,9 @@
           </div>
         </div>
       </section>    
-      
+        <!-- Tentang Section End-->
+
+          <!-- Beasiswa Section-->
       <section class="digital-marketing-service" id="beasiswa-section">
         <div class="row align-items-center">
           <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
@@ -120,7 +126,8 @@
                 <a href="pendaftaran.php" class="btn btn-info">Daftar</a>
           </div>
         </div>
-      </section>     
+      </section>  
+      <!-- Beasiswa Section End-->   
         
       <section class="contact-us" id="contact-section">
         <div class="contact-us-bgimage grid-margin" >

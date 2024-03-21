@@ -1,5 +1,5 @@
 <?php
-// Make sure to include the 'config.php' file
+// impor file
 include('config.php');
 session_start();
 
@@ -31,7 +31,7 @@ $sqlNonakademik = mysqli_query($db, $queryNonakademik);
 $nonakademik = mysqli_fetch_assoc($sqlNonakademik);
 $jmlNonakademik = $nonakademik['COUNT(*)'];
 
-// Calculate the total count
+// kakulasi total perhitungan
 $total = totalData($jmlAkademik, $jmlNonakademik);
 
 // Close database connection
@@ -106,7 +106,7 @@ mysqli_close($db);
                 <div class="col-md-6 col-12">
                     <!-- Tampil Chart -->
                     <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
-                    <a href="tabel-pendaftaran.php" class="btn btn-primary d-block">Kembali</a>
+                    <a href="tabel_pendaftaran.php" class="btn btn-primary d-block">Kembali</a>
                 </div>
             </div>
         </div>
